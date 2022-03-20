@@ -11,7 +11,7 @@
 		- Abfragen(enthalten): ist x € M ?
 		- Erstellen einer neuen Menge: M:= Q (leere Menge erstellen)
 		- Durchlaufen: für alle x € M ... 
-## ADT spezifizieren: (WAS)
+# ADT spezifizieren: (WAS)
 	**alle Arten können sich gegenseitig unterstützen**
 	- VERBAL: in Worten was die Operationen machen sollen.
 	- modellierende Spezi. :
@@ -26,7 +26,7 @@
 		- sagt: welche Beziegungen bestehen zwischen Operationen
 		- Daten(Werte) verschwinden in dieser Methode
 
-## prozeduale/funktionale Abstraktion:
+# prozeduale/funktionale Abstraktion:
 	- Beipiel: Das Implementieren einer Funktion für sich wiederholende Aufgaben.
 	- Wenn Datentypen nicht wichtig sind. (generics java)
 	- Classes in OOP funktional und auch Daten-enthaltend
