@@ -15,7 +15,7 @@
 
 ## ADT spezifizieren: (WAS)
 
-	**alle Arten können sich gegenseitig unterstützen**
+	__alle Arten können sich gegenseitig unterstützen__
 	
 	- VERBAL: in Worten was die Operationen machen sollen.
 	- modellierende Spezi. :
