@@ -1,0 +1,101 @@
+alp 3
+
+1-Interface vs implementation:
+	interface: what Datastructure do
+	implementation: how it does it
+
+2-Queue Interface:
+	-FIFO
+	-Opertions:
+		-add(x) or enqueue(x)
+		-remove() or dequeue() no operand. FIFO!
+	-example: line-up
+
+3-priority queue:
+	-no fifo or lifo
+	-Operations:
+		-add(x) 
+		-removeMin(x) delete the smalles item in the Queue 
+	-example: hospital emergency room
+	
+4-Stack or Lifo-Queue:
+	-Lifo
+	-operations:
+		-add(x) or push()
+		-remove() or pop()
+	-other naming to avoid confusion with Fifo-Queue-Operations
+	-example: plates of folded clothes
+	
+5- Deque Interface:
+	-generalization of both Fifo-Queue and Lifo-Queue(Stack)
+	-adding and deleting can be done on both sides (first and last)
+	-interesting fact: 
+		-Fifo Queue can be implemented using:
+			-addLast(x)
+			-removeFirst()
+		-Lifo Queue (Stack) can be implemented using:
+			-addFirst(x)
+			-removeFirst()
+	-Operations:
+		-addFirst(x)
+		-removeFirst()
+		-addLast(x)
+		-removeLast()
+		
+6- List Interface:
+	-Queue and Deque and Stack are subsumed by List Interface
+	-sequence of indexed items
+	-starts by 0 
+	-goes to n-1
+	-operations:
+		-size() get size of list = n
+		-get(i) return element at index i
+		-set(i,x) replace item at index i with x
+		-add(i,x) add x at index i and shift all items (i..n-1) one position further
+		-remove(i) remove element at index i and shift all items (i+1..n-1) one position back
+
+7- implementing Deque with List-Interface-Operations:
+	-addFirst(x) = add(0,x)
+	-removeFirst() = remove(0)
+	-addLast(x) = add(size()-1,x)
+	-removeLast() = remove(size()-1)
+	
+8- USet Interface:
+	-Unordered Set: no order
+	-unique Items	
+	-Operations: in all operations where comparing will be done: argument must be the same object.
+		-size() return n: the number of items in the set
+		-add(x) add x to Set if not exists: return:
+			-true: added
+			-false: not added: means x already exists
+		-remove(x): remove x from set if exits: return:
+			-x: if removed
+			-null: if not existed
+		-find(x): search for x and return it:
+			-x: found
+			-null: not found
+9- SSet Interface:
+	-ordered/sorted Set
+	-relies on compare(x,y)
+	-operations:
+		-size(): same as in USet
+		-add(x): same as in USet
+		-remove(x): same as in USet
+		-compare(x,y): return:
+			- <0 or negativ number if x < y
+			- >0 or positiv number if x > y
+			- =0 or equals 0 if x = y 
+		-find(x): find smalles element in set such that element >= x, return:
+			-element
+			-null if this element does not exist	
+			
+10- difference SSet vs USet:
+	-find(x,y):
+		-USet constant time
+		-SSet logarithmic size because of comparsions 
+		-SSet.find(x) will return the smallest element close to or equal to x, even if x was not found. -> EXTRA FUNCTIONALITY
+		-SSet.find(x) more time and harder implementation
+	-choosing between them depends on if the extra functionality (always retruns a value) of SSet.find(x) is needed
+		
+
+
