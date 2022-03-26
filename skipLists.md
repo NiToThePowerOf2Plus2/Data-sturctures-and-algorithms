@@ -7,6 +7,7 @@
 - Grundidee: die Fähigkeit zu springen und nicht immer sequentiell laufen zu müssen.
 
 ## suchen O(log_2(h))
+![skiplist search](./skiplistSearch.png)
 - Kopie machen von jedem n-ten Element
 - somit entsteht eine weiter Stufe die nur aus einigen Elementen besteht. 
 - man vergleicht das zu suchende Element mit den Elementen dieser neuen Stufe 
