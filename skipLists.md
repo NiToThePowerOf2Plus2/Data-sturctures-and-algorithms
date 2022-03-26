@@ -3,15 +3,17 @@
 - randomisierte Datenstrukturen ( basieren auf Listen )
 - Reihenfolge sortiert
 - suchen sequentiell
-- Suchen mit binärer Suche in O(log n)
+- Suchen mit binärer Suche unmöglich trotz sortierter Elemente wegen der auf die LinkedLists basierten Implementierung. 
 - Grundidee: die Fähigkeit zu springen und nicht immer sequentiell laufen zu müssen.
 
 ## suchen O(log_2(h))
 ![skiplist search](./skiplistSearch.png)
-- Kopie machen von jedem n-ten Element
-- somit entsteht eine weiter Stufe die nur aus einigen Elementen besteht. 
-- man vergleicht das zu suchende Element mit den Elementen dieser neuen Stufe 
+
+- neue Stufe über die originale Liste machen, bestehend von jedem n-ten Element
+- somit entstehen weitere Stufen, die nur aus einigen Elementen bestehen. 
+- man vergleicht das zu suchende Element mit den Elementen dieser neuen Stufe.
 - Beim finden des passenden Bereiches geht man zurück und sucht sequentiell in der originalen Liste. 
+
 ### zeit des Suchens
 - hängt von dem Abstand, den man zwischen den kopierten Elementen auswählt. 
 - Beispiel:
